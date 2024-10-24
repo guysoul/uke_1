@@ -1,10 +1,15 @@
-const SkillsButton = () => {
+const SkillsButton = ({ skills, onSkillClick }) => {
   const showDetails = () => {
-    alert("Skills : HTML, CSS, Nodejs");
+    alert(`Skills: ${skills.join(", ")}`);
   };
+
   return (
     <div>
-      <button onClick={showDetails}>Show Details</button>
+      {skills.map((skill, index) => (
+        <button key={index} onClick={() => onSkillClick(skill)}>
+          {skill}
+        </button>
+      ))}
     </div>
   );
 };
