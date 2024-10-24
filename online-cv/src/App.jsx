@@ -1,10 +1,14 @@
-import reactLogo from "./assets/react.svg";
+import "./App.css";
+import Header from "./components/Header";
+import PersonalInfo from "./components/Personalinfo";
+import SkillsButton from "./components/SkillsButton";
 
 function App() {
   return (
     <div>
-      <h1>Mitt Online CV</h1>
-      <img src={reactLogo} className="logo react" alt="React logo" />
+      <Header />
+      <PersonalInfo />
+      <SkillsButton />
     </div>
   );
 }
